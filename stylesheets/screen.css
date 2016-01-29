@@ -1,0 +1,195 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*------------Rewrite original------------*/
+/* line 10, ../sass/screen.scss */
+.popover {
+  max-width: 376px;
+}
+
+/*------------Common------------*/
+/* line 15, ../sass/screen.scss */
+.cup-width {
+  width: 100px;
+}
+
+/* line 19, ../sass/screen.scss */
+.form-group {
+  margin-bottom: 10px !important;
+}
+
+/* line 23, ../sass/screen.scss */
+#btn-syncNTP {
+  width: 100%;
+}
+
+/* line 27, ../sass/screen.scss */
+.panel-heading {
+  position: relative;
+}
+
+/* line 32, ../sass/screen.scss */
+.help-in-title .glyphicon-question-sign, .help-in-title .glyphicon-menu-down {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0, -50%);
+  transition: color .3s;
+}
+/* line 39, ../sass/screen.scss */
+.help-in-title .glyphicon-question-sign:hover, .help-in-title .glyphicon-menu-down:hover {
+  cursor: pointer;
+  color: #62c462;
+}
+
+/*------------Header------------*/
+/* line 49, ../sass/screen.scss */
+header .glyphicon-refresh {
+  /*		top: 33px;
+  		left: 40px;*/
+  top: 1.3em;
+  left: 2.7em;
+  font-size: 1.8em;
+  transition: transform .5s;
+  color: #ee5f5b;
+  cursor: pointer;
+}
+/* line 60, ../sass/screen.scss */
+header .glyphicon-user {
+  /*		top: 38px;
+  		left: 220px;*/
+  transform: translate(4em, 2em);
+  font-size: 1.3em;
+  transition: color .3s;
+}
+/* line 67, ../sass/screen.scss */
+header .glyphicon-user:hover {
+  cursor: pointer;
+  color: #ee5f5b;
+}
+/* line 73, ../sass/screen.scss */
+header .version {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/*------------Network Panel------------*/
+/*.network-heading {
+	position: relative;
+	.glyphicon-question-sign {
+		position: absolute;
+		top: 50%;
+		right: 3%;
+		transform: translate(0,-50%);
+	}
+}*/
+/* line 92, ../sass/screen.scss */
+.network-body .btn-network {
+  display: block;
+  margin: 15px auto;
+}
+
+/*------------Time Sync Panel------------*/
+/* line 101, ../sass/screen.scss */
+.time-sync-body .input-group-btn .btn {
+  height: 39px;
+  margin-left: 0;
+}
+/* line 105, ../sass/screen.scss */
+.time-sync-body .input-group-btn .btn-ntp {
+  width: 112%;
+}
+
+/*------------Failover Panel------------*/
+/* line 112, ../sass/screen.scss */
+.failover-body {
+  text-align: center;
+}
+/* line 114, ../sass/screen.scss */
+.failover-body label {
+  font-weight: normal;
+  margin-right: 20px;
+}
+
+/*------------Recovery Panel------------*/
+/* line 122, ../sass/screen.scss */
+.recovery-body .pl-5p {
+  padding-left: 5%;
+}
+/* line 126, ../sass/screen.scss */
+.recovery-body input[type=file] {
+  color: #c8c8c8;
+  padding: 6.5px;
+}
+/* line 130, ../sass/screen.scss */
+.recovery-body .glyphicon {
+  padding-right: 10px;
+}
+/* line 134, ../sass/screen.scss */
+.recovery-body .hard-width {
+  width: 271px;
+  margin-left: 5px;
+}
+/* line 140, ../sass/screen.scss */
+.recovery-body .col-sm-6:last-child {
+  text-align: center;
+}
+
+/*------------Extended Panel------------*/
+/* line 148, ../sass/screen.scss */
+.panel-extended .glyphicon-menu-down {
+  transition: transform .5s;
+}
+/* line 152, ../sass/screen.scss */
+.panel-extended .out {
+  transform-origin: 50% 30% 0;
+  transform: rotate(180deg);
+}
+/* line 156, ../sass/screen.scss */
+.panel-extended j
+.out {
+  transform-origin: 50% 30% 0;
+  transform: rotate(0deg);
+}
+/* line 162, ../sass/screen.scss */
+.panel-extended .extended-body {
+  display: none;
+}
+/* line 166, ../sass/screen.scss */
+.panel-extended .del-prog {
+  margin: 5% 20%;
+}
+/* line 171, ../sass/screen.scss */
+.panel-extended .col-sm-6:last-child {
+  text-align: center;
+}
+
+/*------------Footer------------*/
+/* line 178, ../sass/screen.scss */
+.footer {
+  max-width: 716px;
+}
+/* line 181, ../sass/screen.scss */
+.footer .navbar-nav > li > a:last-child {
+  border-right: none;
+}
+
+/*-----------------------------------
+================Modals==============
+-----------------------------------*/
+/* line 193, ../sass/screen.scss */
+#user-settings .modal-header {
+  border-bottom: 2px solid #1c1e22;
+  margin-bottom: 15px;
+}
+
+/* line 200, ../sass/screen.scss */
+.modal-user-settings label {
+  width: 150px;
+}
+
+/* line 206, ../sass/screen.scss */
+.wrapper p {
+  width: 300px;
+}

@@ -1,0 +1,209 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$danger: #ee5f5b;
+$success: #62c462;
+
+/*------------Rewrite original------------*/
+.popover {
+	max-width: 376px;
+}
+
+/*------------Common------------*/
+.cup-width {
+	width: 100px;
+}
+
+.form-group {
+	margin-bottom: 10px !important;
+}
+
+#btn-syncNTP {
+	width: 100%;
+}
+
+.panel-heading {
+	position: relative;
+}
+
+.help-in-title {
+	.glyphicon-question-sign, .glyphicon-menu-down {
+		position: absolute;
+		top: 50%;
+		right: 3%;
+		transform: translate(0,-50%);
+		transition: color .3s;
+
+		&:hover {
+			cursor: pointer;
+			color: #62c462;
+		}
+	}
+
+
+}
+/*------------Header------------*/
+header {
+	.glyphicon-refresh {
+/*		top: 33px;
+		left: 40px;*/
+		top: 1.3em;
+		left: 2.7em;
+		font-size: 1.8em;
+		transition: transform .5s;
+		color: $danger;
+		cursor: pointer;
+	}
+
+	.glyphicon-user {
+/*		top: 38px;
+		left: 220px;*/
+		transform: translate(4em,2em);
+		font-size: 1.3em;
+		transition: color .3s;
+
+		&:hover {
+			cursor: pointer;
+			color:#ee5f5b;
+		}
+
+	}
+	.version {
+		margin-top: 10px;
+		text-align: right;
+	}
+
+}
+
+/*------------Network Panel------------*/
+/*.network-heading {
+	position: relative;
+	.glyphicon-question-sign {
+		position: absolute;
+		top: 50%;
+		right: 3%;
+		transform: translate(0,-50%);
+	}
+}*/
+
+.network-body {
+	.btn-network {
+		display: block;
+		margin: 15px auto;
+	}
+}
+
+/*------------Time Sync Panel------------*/
+.time-sync-body {
+	.input-group-btn {
+		.btn {
+			height: 39px;
+			margin-left: 0;
+		}
+		.btn-ntp {
+			width: 112%;
+		}
+	}
+}
+
+/*------------Failover Panel------------*/
+.failover-body {
+	text-align: center;
+	label {
+		font-weight: normal;
+		margin-right: 20px;
+	}
+}
+
+/*------------Recovery Panel------------*/
+.recovery-body {
+	.pl-5p {
+		padding-left: 5%;
+	}
+
+	input[type=file] {
+		color: #c8c8c8;
+		padding: 6.5px;
+	}
+	.glyphicon {
+		padding-right: 10px;
+	}
+
+	.hard-width {
+		width: 271px;
+		margin-left: 5px;
+	}
+
+	.col-sm-6 {
+		&:last-child {
+			text-align: center;
+		}
+	}
+}
+
+/*------------Extended Panel------------*/
+.panel-extended {
+	.glyphicon-menu-down {
+		transition: transform .5s;
+	}
+
+	.out {
+		transform-origin: 50% 30% 0;
+		transform: rotate(180deg);
+	}
+	j
+	.out {
+		transform-origin: 50% 30% 0;
+		transform: rotate(0deg);
+	}
+
+	.extended-body {
+		display: none;
+	}
+
+	.del-prog {
+		margin: 5% 20%;
+	}
+
+	.col-sm-6 {
+		&:last-child {
+			text-align: center;
+		}
+	}
+
+}
+/*------------Footer------------*/
+.footer {
+	max-width: 716px;
+	.navbar-nav > li > a {
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+
+
+/*-----------------------------------
+================Modals==============
+-----------------------------------*/
+#user-settings {
+	.modal-header {
+		border-bottom: 2px solid #1c1e22;
+		margin-bottom: 15px;
+	}
+}
+
+.modal-user-settings {
+	label {
+		width: 150px;
+	}
+}
+
+.wrapper {
+	p {
+		width: 300px;
+	}
+}

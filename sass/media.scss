@@ -1,0 +1,107 @@
+
+@media (min-width: 768px) and (max-width: 991px) {
+	header {
+		.glyphicon-refresh {
+			top: 2.0em;
+			left: 2.1em;
+		}
+	}
+
+	header .glyphicon-user {
+	    transform: translate(0, 2.9em);
+	  }
+
+	.col-xs-5 {
+		h1 {
+			margin-bottom: 0;
+		}
+
+		small {
+			margin-left: 40%;
+		}
+	}
+
+	.network-body {
+		.form-group {
+			&:nth-child(1){
+				margin-left: 2%;
+			}
+			&:nth-child(2){
+				margin-left: 7%;
+			}
+			&:nth-child(3){
+				margin-left: 2%;
+			}
+			&:nth-child(4){
+				margin-left: 7%;
+			}
+		}
+		.btn-network {
+			margin: 0 auto;
+		}
+	}
+
+	.time-sync-body {
+		padding-left: 4%;
+		padding-right: 4%;
+
+		form {
+			&:nth-child(1){
+				padding-left: 25%;
+			}
+			&:nth-child(2){
+				padding-left: 25%;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.form-inline .form-control {
+		width: 310px;
+	}
+	header {
+		.glyphicon-refresh {
+			left: 2.1em;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+/*	.form-inline .form-control {
+		width: 410px;
+	}*/
+	.container {
+		width: 970px;
+	}
+/*	header {
+		.glyphicon-refresh {
+			left: 2.7em;
+		}
+	}*/
+}
+
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.rotating {
+	-webkit-animation: rotating 2s linear infinite;
+	-moz-animation: rotating 2s linear infinite;
+	-ms-animation: rotating 2s linear infinite;
+	-o-animation: rotating 2s linear infinite;
+	animation: rotating 2s linear infinite;
+}

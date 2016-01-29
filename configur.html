@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>S-100-CPU Configurator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-slate.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/media.css">
+	<link rel="stylesheet" href="stylesheets/animate.css">
+</head>
+<body>
+
+
+	<div class="container">
+
+		<header>
+			<div class="row">
+				<div class="col-xs-5">
+					<h1>S-100-CPU <small>configurator</small></h1>
+				</div>
+				<div class="col-xs-3">
+					<span class="glyphicon glyphicon-refresh" data-toggle="tooltip-reload" title="Перезапустить котроллер"></span>
+				</div>
+				<div class="col-xs-1">
+					<span class="glyphicon glyphicon-user" data-toggle="modal" data-target="#user-settings"></span>
+				</div>
+				<div class="col-xs-3 version">Version firmware 1.0.4</div>
+			</div>
+			<hr>
+		</header>
+
+		<div class="alert alert-dismissible alert-warning" style="display:none">
+		  <button type="button" class="close" data-dismiss="alert">&times;</button>
+		  <p>Controller is reloading. Please wait <a href="#" class="alert-second"></a> sec.</p>
+		</div>
+
+		<div class="main">
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="panel panel-default">
+						<div class="panel-heading network-heading help-in-title">
+							<h3 class="panel-title">Network</h3>
+							<span class="glyphicon glyphicon-question-sign" data-toggle="tip" title="some toma.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, debitis." data-placement="bottom"></span>
+						</div>
+						<div class="panel-body network-body">
+							<form class="form-inline" role="form">
+								<div class="form-group">
+									<label class="cup-width" for="ip">IP</label>
+									<input type="ip" class="form-control" id="ip" placeholder="">
+								</div>
+								<div class="form-group">
+									<label class="cup-width" for="mask">Маска</label>
+									<input type="imask" class="form-control" id="imask" placeholder="">
+								</div>
+								<div class="form-group">
+									<label class="cup-width" for="gateway">Шлюз</label>
+									<input type="gateway" class="form-control" id="gateway" placeholder="">
+								</div>
+								<div class="form-group">
+									<label class="cup-width" for="MAC">MAC</label>
+									<input type="MAC" class="form-control" id="MAC" placeholder="">
+								</div>
+								<button type="submit" class="btn btn-default btn-network">Установить</button>
+							</form>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+
+					<div class="panel panel-default">
+						<div class="panel-heading help-in-title">
+							<h3 class="panel-title">Time Sync</h3>
+							<span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="My title"></span>
+
+							<div class="popover-time-sync hide">
+								<h3>hello</h3>
+								<div class="wrapper">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae cum perspiciatis fugiat ut, totam eum repellat commodi possimus nobis t amet, consectetur adipisicing elit. Recusandae cum perspiciatis fugiat ut, totam eum repellat commodi possimus nobdoloribus.</p>
+									<ul>
+										<li><a href="">link-1</a></li>
+										<li><a href="">link-2</a></li>
+										<li><a href="">link-3</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="panel-body time-sync-body">
+							<form class="form-inline" role="form">
+								<div class="form-group">
+									<label class="cup-width" for="rtc">RTC</label>
+									<div class="input-group">
+										<input type="datetime-local" placeholder="yyyy-MM-ddTHH:mm:ss" class="form-control" id="rtc" placeholder="">
+										<span class="input-group-btn">
+											<button type="submit" class="btn btn-default">Установить</button>
+										</span>
+									</div>
+								</div>
+							</form>
+
+							<form class="form-inline" role="form">
+								<div class="form-group">
+									<label class="cup-width" for="ntp">NTP Сервер</label>
+									<div class="input-group">
+										<input type="ntp" class="form-control" id="ntp" placeholder="">
+										<span class="input-group-btn">
+											<button type="submit" class="btn btn-default btn-ntp">Изменить</button>
+										</span>
+									</div>
+								</div>
+							</form>
+
+							<form class="form-inline" role="form">
+								<button id="btn-syncNTP" type="submit" class="btn btn-default">Синхронизировать время с NTP сервером</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Failover</h3>
+						</div>
+						<div class="panel-body failover-body">
+							<form class="form-inline" >
+								<!-- <span class="input-group-addon"> -->
+								<!-- <div class="form-group"> -->
+								<!-- <div class="input-group"> -->
+								<input name="failover" type="radio" aria-label="pr">
+								<label class="failover-label" name="pr">Primary</label>
+								<input name="failover" type="radio" aria-label="ce">
+								<label class="failover-label" name="ce">Secondary</label>
+								<button type="submit" class="btn btn-default">Switch</button>
+								<!-- </div> -->
+								<!-- </div> -->
+								<!-- </span> -->
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div><!--row-->
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">Recovery</h3>
+						</div>
+
+						<div class="panel-body recovery-body">
+							<div class="row">
+								<div class="col-sm-6 pl-5p">
+									<form class="form">
+										<div class="form-group">
+											<input type="file" name="file" id="">
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-danger">
+												<span class="glyphicon glyphicon-retweet"></span>Восстановить из резервной копии
+											</button>
+										</div>
+									</form>
+								</div>
+								<div class="col-sm-6">
+									<form class="form">
+										<div class="form-group">
+											<button type="submit" class="btn btn-default hard-width">
+												<span class="glyphicon glyphicon-floppy-saved"></span>Создать резервную копию
+											</button>
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-default hard-width">
+												<span class="glyphicon glyphicon-save"></span>Скачать резервную копию
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default panel-extended">
+				<div class="panel-heading help-in-title">
+					<h3 class="panel-title">Extended</h3>
+					<span class="glyphicon glyphicon-menu-down in"></span>
+				</div>
+				<div class="panel-body extended-body">
+					<div class="row">
+						<div class="col-sm-6">
+							<form class="form " action="exmaple.py">
+								<button type="submit" class="btn btn-success del-prog">Удалить программу</button>
+							</form>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<div class="form">
+									<button class="btn btn-default">Скачать файл описание <span>(Workbench)</span></button>
+								</div>
+							</div>
+							<div class="form">
+								<button class="btn btn-default"> Загрузить тестовую программу CPU &nbsp;</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid footer">
+				<div class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li><a class="glyphicon glyphicon-home" href=""></a></li>
+						<li><a href="">Европрибор</a></li>
+						<li><a href="">Европрибор - Автоматизация</a></li>
+						<li><a href="">Каталог</a></li>
+						<li><a href="">Документация</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div><!--main-->
+
+
+	</div>
+
+<!-- Modal User Settings -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="user-settings">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Имя пользователя: <mark>S-100</mark></h4>
+	      </div>
+	      <div class="modal-body modal-user-settings">
+	      		<h4>Change password</h4>
+	      	<div class="form-inline">
+	      		<hr>
+	      		<div class="form-group">
+	      			<label for="password">Your password:</label>
+	      			<input class="form-control" type="text" name="password" id="">
+	      		</div>
+	      		<div class="form-group">
+	      			<label for="password-again">Your password again:</label>
+	      			<input class="form-control" type="text" name="password-again" id="">
+	      			<button class="btn btn-default">Подтвердить</button>
+	      		</div>
+	      	</div>
+					<h4>Tips</h4>
+					<hr>
+	      	<div class="input-group">
+	      		<label for="" id="tips-flag">Подсказки $flag</label>
+	      		<span class="input-group-btn"><button class="btn btn-default">on</button></span>
+	      		<span class="input-group-btn"><button class="btn btn-default">off</button></span>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/animate-color.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
